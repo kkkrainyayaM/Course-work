@@ -1,17 +1,25 @@
 #pragma once
 #include "Employee.h"
 using namespace std;
-class Seller : public Employee {
+class Admin : public Employee {
 
 public:
-	Seller() : Employee() {};
-	Seller(int id, string l, string p) : Employee(id, l, p,/* Role::SELLER*/) {};
-	Seller(const Seller& seller) : Employee(seller) {}
+	Admin() : Employee() {
+	};
+	Admin(int id, string n, string l, string p) : Employee(id, n, l, p, Role::ADMIN) {
+	};
 
-	~Seller() {
+	Admin(const Admin& Admin) : Employee(Admin) {
+	}
+
+	~Admin() {
 		Employee::~Employee();
-}
-	//void toString();
+	}
+	void toString();
 
-	friend ostream& operator<< (ostream& s, Seller& seller);
+	void printInfo() {
+		cout << "Èìÿ: " << getName() << endl;
+	}
+
+	friend ostream& operator<< (ostream& s, Admin& Admin);
 };

@@ -1,15 +1,16 @@
 #pragma once
 #include "Employee.h"
-class Participant : public Employee {
+class User : public Employee {
 public:
-	Participant() {
+	User() {
 	}
-	Participant(int id, string l, string p) : Employee(id, l, p, /*Role::PARTICIPANT*/) {
+	User(int id, string n, string l, string p) : Employee(id, n, l, p, Role::USER) {
 	}
-	~Participant() {
+	~User() {
 		Employee::~Employee();
 	}
-	//void toString();
+	void myBuy();
 
-	friend ostream& operator<< (ostream& s, Participant& p);
+	void toString();
+	friend ostream& operator<< (ostream& s, User& p);
 };

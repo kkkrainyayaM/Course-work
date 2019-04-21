@@ -48,9 +48,10 @@ public:
 		//delete &name;
 	}
 	void setName(string name);
+	void readName();
 	string getName();
 	void toString();
-	void setLog(string login);
+	void setLog();
 	void setPas();
 	void setRole(Role role);
 	int getID();
@@ -60,6 +61,3 @@ public:
 	Role getRole();
 
 };
-
-
-

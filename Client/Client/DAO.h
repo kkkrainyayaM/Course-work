@@ -4,13 +4,14 @@
 #include "User.h"
 #include "Admin.h"
 #include "Employee.h"
+#include <vector>
 
 namespace DataAccessObject {
 
 	class DAO {
 	private:
 		Vector<User> users = Vector<User>();
-		Vector<Admin> admins = Vector<Admins>();
+		Vector<Admin> admins = Vector<Admin>();
 		static DAO *instance;
 		DAO() {}
 
